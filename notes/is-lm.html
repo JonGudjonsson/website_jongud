@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IS-LM Model — Jón Guðjónsson</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="../css/notes.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body data-page="is-lm">
+
+  <header>
+    <nav>
+      <a href="../index.html" class="nav-name">Jón Guðjónsson</a>
+      <ul>
+        <li><a href="../index.html">About</a></li>
+        <li><a href="../research.html">Research</a></li>
+        <li><a href="../teaching.html">Teaching</a></li>
+        <li><a href="../notes.html" class="active">Notes</a></li>
+        <li><a href="../contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-header fade-in">
+      <h1>IS-LM Model</h1>
+      <p>Interactive macroeconomic model — adjust parameters and observe equilibrium</p>
+    </div>
+
+    <div class="content">
+
+      <section class="model-container fade-in">
+        <canvas id="islm-canvas"></canvas>
+
+        <div class="controls">
+          <div class="control-group">
+            <label for="g-slider">Government spending (G)</label>
+            <div class="slider-row">
+              <input type="range" id="g-slider" min="50" max="200" value="100" step="5" />
+              <span id="g-value" class="slider-val">100</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label for="ms-slider">Money supply (M)</label>
+            <div class="slider-row">
+              <input type="range" id="ms-slider" min="50" max="200" value="100" step="5" />
+              <span id="ms-value" class="slider-val">100</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label for="t-slider">Taxes (T)</label>
+            <div class="slider-row">
+              <input type="range" id="t-slider" min="0" max="100" value="30" step="5" />
+              <span id="t-value" class="slider-val">30</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="equilibrium-display">
+          <div class="eq-item">
+            <span class="eq-label">Output (Y*)</span>
+            <span id="eq-y" class="eq-value">—</span>
+          </div>
+          <div class="eq-item">
+            <span class="eq-label">Interest rate (r*)</span>
+            <span id="eq-r" class="eq-value">—</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="model-notes fade-in">
+        <h2 class="section-title">About this model</h2>
+        <p>
+          This is a simplified IS-LM model. The IS curve represents goods market equilibrium;
+          the LM curve represents money market equilibrium. The intersection gives the
+          short-run equilibrium output and interest rate.
+        </p>
+        <p style="margin-top:1rem; color:var(--ink-light); font-size:0.88rem;">
+          Note: This is a pedagogical illustration, not a full calibrated model.
+          Parameters are stylised.
+        </p>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jón Guðjónsson &middot; <a href="mailto:jon@jongudjons.is">jon@jongudjons.is</a></p>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script src="../js/pages/is-lm.js"></script>
+</body>
+</html>

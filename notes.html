@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notes — Jón Guðjónsson</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="nav-name">Jón Guðjónsson</a>
+      <ul>
+        <li><a href="index.html">About</a></li>
+        <li><a href="research.html">Research</a></li>
+        <li><a href="teaching.html">Teaching</a></li>
+        <li><a href="notes.html" class="active">Notes</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-header fade-in">
+      <h1>Notes</h1>
+      <p>Short notes, interactive models, and occasional writing</p>
+    </div>
+
+    <div class="content">
+
+      <!-- INTERACTIVE MODELS (ready for your JS experiments) -->
+      <section class="fade-in">
+        <h2 class="section-title">Interactive</h2>
+        <p style="color:var(--ink-mid); margin-bottom:2rem; font-size:0.95rem;">
+          Visualisations and interactive economic models. More to come.
+        </p>
+
+        <div class="note-grid">
+          <!-- Example note/model card — duplicate as needed -->
+          <a href="notes/is-lm.html" class="note-card">
+            <span class="note-tag">Model</span>
+            <h3>IS-LM Interactive</h3>
+            <p>Adjust monetary and fiscal policy parameters and see equilibrium shift in real time.</p>
+            <span class="note-arrow">&rarr;</span>
+          </a>
+
+          <!-- Placeholder card -->
+          <div class="note-card note-card--placeholder">
+            <span class="note-tag">Coming soon</span>
+            <h3>Your next model here</h3>
+            <p>Add a new file under <code>notes/</code> and link it from this page.</p>
+          </div>
+        </div>
+      </section>
+
+      <hr class="divider" />
+
+      <!-- WRITTEN NOTES -->
+      <section class="fade-in">
+        <h2 class="section-title">Writing</h2>
+        <ul class="paper-list">
+
+          <li class="paper">
+            <div class="paper-title">
+              <a href="#">Note or post title</a>
+              <span class="paper-year">2024</span>
+            </div>
+            <p class="paper-meta">A sentence describing what this note covers.</p>
+            <div class="paper-links"><a href="#">Read</a></div>
+          </li>
+
+        </ul>
+      </section>
+
+    </div>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Jón Guðjónsson &middot; <a href="mailto:jon@jongudjons.is">jon@jongudjons.is</a></p>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

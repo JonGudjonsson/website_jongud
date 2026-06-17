@@ -1,0 +1,269 @@
+/* ── Reset & Base ─────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --white:       #ffffff;
+  --off-white:   #f9f8f6;
+  --ink:         #1a1a18;
+  --ink-mid:     #3d3d39;
+  --ink-light:   #6b6b65;
+  --rule:        #e2e0da;
+  --accent:      #1a3a5c;
+  --accent-hover:#0f2640;
+
+  --font-serif:  'EB Garamond', Georgia, serif;
+  --font-sans:   'DM Sans', system-ui, sans-serif;
+
+  --max-w:       860px;
+  --section-gap: 4rem;
+}
+
+html { scroll-behavior: smooth; font-size: 17px; }
+
+body {
+  background: var(--white);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-weight: 300;
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+main { flex: 1; }
+
+/* ── Nav ──────────────────────────────────────────────────── */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255,255,255,0.93);
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid var(--rule);
+}
+
+nav {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.nav-name {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+}
+
+nav ul a {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--ink-light);
+  text-decoration: none;
+  transition: color 0.15s;
+  padding-bottom: 2px;
+  border-bottom: 1px solid transparent;
+  transition: color 0.15s, border-color 0.15s;
+}
+
+nav ul a:hover,
+nav ul a.active {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ── Page header (non-home pages) ─────────────────────────── */
+.page-header {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 3.5rem 2rem 2rem;
+  border-bottom: 1px solid var(--rule);
+  margin-bottom: 3rem;
+}
+
+.page-header h1 {
+  font-family: var(--font-serif);
+  font-size: 2.2rem;
+  font-weight: 500;
+  letter-spacing: -0.01em;
+}
+
+.page-header p {
+  color: var(--ink-mid);
+  margin-top: 0.4rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 1.05rem;
+}
+
+/* ── Content wrapper ──────────────────────────────────────── */
+.content {
+  max-width: var(--max-w);
+  margin: 0 auto;
+  padding: 0 2rem var(--section-gap);
+}
+
+/* ── Buttons ──────────────────────────────────────────────── */
+.btn-primary, .btn-secondary {
+  display: inline-block;
+  padding: 0.55rem 1.4rem;
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: background 0.15s, color 0.15s, border-color 0.15s;
+}
+
+.btn-primary {
+  background: var(--accent);
+  color: var(--white);
+  border: 1px solid var(--accent);
+}
+
+.btn-primary:hover { background: var(--accent-hover); border-color: var(--accent-hover); }
+
+.btn-secondary {
+  background: transparent;
+  color: var(--accent);
+  border: 1px solid var(--accent);
+}
+
+.btn-secondary:hover { background: var(--accent); color: var(--white); }
+
+/* ── Divider ──────────────────────────────────────────────── */
+.divider {
+  border: none;
+  border-top: 1px solid var(--rule);
+  margin: var(--section-gap) 0;
+}
+
+/* ── Section headings ─────────────────────────────────────── */
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1.5rem;
+}
+
+.subsection-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  margin-bottom: 1.2rem;
+  margin-top: 2.5rem;
+  color: var(--ink);
+}
+
+/* ── Paper list ───────────────────────────────────────────── */
+.paper-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.paper {
+  padding: 1.8rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.paper:first-child { border-top: 1px solid var(--rule); }
+
+.paper-title {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 0.35rem;
+  flex-wrap: wrap;
+}
+
+.paper-title a {
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+  transition: color 0.15s;
+}
+
+.paper-title a:hover { color: var(--accent); }
+
+.paper-year {
+  font-size: 0.82rem;
+  color: var(--ink-light);
+  white-space: nowrap;
+}
+
+.paper-meta {
+  font-size: 0.9rem;
+  color: var(--ink-mid);
+  margin-bottom: 0.6rem;
+}
+
+.paper-links {
+  display: flex;
+  gap: 1.2rem;
+}
+
+.paper-links a {
+  font-size: 0.78rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--accent);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.15s;
+}
+
+.paper-links a:hover { border-color: var(--accent); }
+
+/* ── Footer ───────────────────────────────────────────────── */
+footer {
+  border-top: 1px solid var(--rule);
+  padding: 1.8rem 2rem;
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--ink-light);
+}
+
+footer a { color: var(--ink-light); text-decoration: none; }
+footer a:hover { color: var(--accent); }
+
+/* ── Animations (opt-in via JS) ───────────────────────────── */
+.fade-in {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ── Responsive ───────────────────────────────────────────── */
+@media (max-width: 680px) {
+  nav { padding: 0.9rem 1.5rem; }
+  nav ul { gap: 1.2rem; }
+  nav ul a { font-size: 0.72rem; letter-spacing: 0.04em; }
+  .page-header { padding: 2.5rem 1.5rem 1.5rem; }
+  .content { padding: 0 1.5rem var(--section-gap); }
+}
