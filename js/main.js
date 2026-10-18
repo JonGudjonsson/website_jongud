@@ -1,5 +1,5 @@
 /**
- * main.js — shared across all pages
+ * main.js: shared across all pages
  *
  * 1. Nav: marks the current page link as active
  * 2. Animations: fade-in on scroll for .fade-in elements

@@ -195,7 +195,8 @@ nav ul a.active {
   flex-wrap: wrap;
 }
 
-.paper-title a {
+.paper-title a,
+.paper-title .paper-name {
   font-family: var(--font-serif);
   font-size: 1.05rem;
   font-weight: 500;

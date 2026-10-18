@@ -3,8 +3,56 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Jón Guðjónsson Economist</title>
-  <meta name="description" content="Personal academic website of Jón Guðjónsson, economist working in macroeconomics, finance, and financial stability." />
+  <title>Jón Guðjónsson (Jon Gudjonsson) | Economist</title>
+  <meta name="description" content="Personal academic website of Jón Guðjónsson, economist working on financial economics, macroprudential policy and financial stability at the Central Bank of Iceland and Copenhagen Business School." />
+  <link rel="canonical" href="https://jongudjons.is/" />
+  <meta property="og:type" content="profile" />
+  <meta property="og:title" content="Jón Guðjónsson (Jon Gudjonsson) | Economist" />
+  <meta property="og:description" content="Personal academic website of Jón Guðjónsson, economist working on financial economics, macroprudential policy and financial stability at the Central Bank of Iceland and Copenhagen Business School." />
+  <meta property="og:url" content="https://jongudjons.is/" />
+  <meta property="og:image" content="https://jongudjons.is/img/jg.png" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Jón Guðjónsson",
+    "alternateName": "Jon Gudjonsson",
+    "url": "https://jongudjons.is/",
+    "image": "https://jongudjons.is/img/jg.png",
+    "jobTitle": "Economist",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Central Bank of Iceland",
+      "url": "https://www.cb.is/"
+    },
+    "affiliation": {
+      "@type": "CollegeOrUniversity",
+      "name": "Copenhagen Business School"
+    },
+    "alumniOf": [
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Cambridge"
+      },
+      {
+        "@type": "CollegeOrUniversity",
+        "name": "University of Iceland"
+      }
+    ],
+    "knowsAbout": [
+      "Financial Economics",
+      "Macroprudential Policy",
+      "Financial Stability",
+      "Pension Finance",
+      "Household Finance",
+      "Macroeconomics",
+      "Computational Economics"
+    ],
+    "sameAs": [
+      "https://github.com/JonGudjonsson"
+    ]
+  }
+  </script>
   <link rel="stylesheet" href="css/style.css" />
   <link rel="stylesheet" href="css/home.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -20,7 +68,7 @@
         <li><a href="index.html" class="active">About</a></li>
         <li><a href="research.html">Research</a></li>
         <li><a href="teaching.html">Teaching</a></li>
-        <li><a href="notes.html">Notes</a></li>
+        <!-- <li><a href="notes.html">Notes</a></li> -->
         <li><a href="contact.html">Contact</a></li>
       </ul>
     </nav>
@@ -30,22 +78,23 @@
     <section class="hero">
       <div class="hero-text fade-in">
         <h1>Jon Gudjonsson</h1>
-        <p class="title-line">Macroeconomics, Finance and Financial Stability</p>
+        <p class="title-line">Financial Economics and Macroprudential Policy</p>
         <p class="affiliation">
-          Central Bank of Iceland &middot; Copenhagen Business School 
-          <!-- Central Bank of Iceland &middot; University of Iceland -->
+          Central Bank of Iceland &middot; Copenhagen Business School
         </p>
         <p class="bio">
-          I am an economist at the Financial Stability Division of the Central Bank of Iceland, currently also completing a PhD in economics at 
-          Copenhagen Business School. 
+          I am an economist in the Financial Stability department of the Central Bank of Iceland, where I work
+          on macroprudential policy analysis and applied research on household credit and mortgage markets.
+          I am also completing a PhD in economics at Copenhagen Business School (expected 2026), as a PhD Fellow
+          at PeRCent, the Pension Research Centre.
         </p>
         <p class="bio">
-          My interests are in macroeconomics, financial economics, and financial stability, and my dissertation 
-          research looks at the impact of pension fund investment on financial stability.
+          My research is in financial economics and macroprudential policy, with secondary interests in
+          computational economics, macroeconomics, and pension and household finance.
         </p>
         <div class="hero-links">
           <a href="research.html" class="btn-primary">Research</a>
-          <a href="cv.pdf" class="btn-secondary" target="_blank">Download CV</a>
+          <a href="docs/gudjonsson_cv.pdf" class="btn-secondary" target="_blank">Download CV</a>
         </div>
       </div>
       <div class="hero-portrait fade-in" style="transition-delay:0.15s">
@@ -58,24 +107,34 @@
     </section>
 
     <div class="home-content">
+      
       <!-- Research snapshot -->
-      <h2 class="section-title">Recent work</h2>
+      <h2 class="section-title">Working papers</h2>
         <ul class="paper-list">
           <li class="paper">
             <div class="paper-title">
-              <a href="research.html">Working Paper Title Goes Here</a>
-              <span class="paper-year">2024</span>
+              <a href="research.html">Fundamental versus Short-Term Trading: Investor Composition and Herding</a>
             </div>
-            <p class="paper-meta">Short abstract or summary sentence. Add a line here describing your contribution.</p>
-            <div class="paper-links"><a href="#">PDF</a><a href="#">SSRN</a></div>
+            <p class="paper-meta">With Svend Erik Hougaard Jensen, Roel Beetsma and Gylfi Zoega</p>
           </li>
           <li class="paper">
             <div class="paper-title">
-              <a href="research.html">Another Paper Title</a>
-              <span class="paper-year">2023</span>
+              <a href="research.html">Financial Stability Implications of Pension Fund Portfolio Overlap</a>
             </div>
-            <p class="paper-meta">Short abstract or summary sentence. Add a line here describing your contribution.</p>
-            <div class="paper-links"><a href="#">PDF</a></div>
+            <p class="paper-meta">Single-authored</p>
+          </li>
+        </ul>
+
+      <h2 class="section-title">Work in progress</h2>
+        <ul class="paper-list">
+          <li class="paper">
+            <div class="paper-title"><a href="research.html">Macroprudential Policy and Risk Shifting through Mortgage Choice</a></div>
+          </li>
+          <li class="paper">
+            <div class="paper-title"><a href="research.html">Macroprudential Policy and Household Mortgage Choice: Structural Evidence from Iceland</a></div>
+          </li>
+          <li class="paper">
+            <div class="paper-title"><a href="research.html">Property Estimates and Price Dynamics in the Icelandic Housing Market</a></div>
           </li>
         </ul>
 
