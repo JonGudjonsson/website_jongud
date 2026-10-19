@@ -91,9 +91,9 @@ to reduce boilerplate for new models.
 - `index.html` carries schema.org `Person` data (JSON-LD) with both spellings
   of the name. Keep it in sync with the bio.
 - Update the `<lastmod>` dates in `sitemap.xml` after significant changes.
-- Register the site in Google Search Console as a Domain property for
-  `jongudjons.is` (verified by a DNS TXT record at ISNIC), submit
-  `sitemap.xml`, and resubmit it after adding pages.
+- Google Search Console ownership is verified by the
+  `google-site-verification` meta tag in `index.html`. Do not remove it.
+  Submit `sitemap.xml` there, and resubmit it after adding pages.
 
 ## GitHub Pages setup
 
