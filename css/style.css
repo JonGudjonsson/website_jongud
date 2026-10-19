@@ -262,9 +262,49 @@ footer a:hover { color: var(--accent); }
 
 /* ── Responsive ───────────────────────────────────────────── */
 @media (max-width: 680px) {
-  nav { padding: 0.9rem 1.5rem; }
-  nav ul { gap: 1.2rem; }
-  nav ul a { font-size: 0.72rem; letter-spacing: 0.04em; }
-  .page-header { padding: 2.5rem 1.5rem 1.5rem; }
-  .content { padding: 0 1.5rem var(--section-gap); }
+  /* Slightly larger base size: every rem-based size scales up with it */
+  html { font-size: 18px; }
+  body { overflow-wrap: break-word; }
+  :root { --section-gap: 3rem; }
+
+  /* Nav: name on top, links centred underneath, never wider than the screen */
+  nav {
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 0.7rem 1rem 0.6rem;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.2rem 1.4rem;
+  }
+  nav ul a {
+    display: inline-block;
+    font-size: 0.74rem;
+    letter-spacing: 0.05em;
+    padding: 0.3rem 0 0.15rem;
+  }
+
+  .page-header { padding: 2.2rem 1.25rem 1.4rem; margin-bottom: 2rem; }
+  .page-header h1 { font-size: 2rem; }
+  .content { padding: 0 1.25rem var(--section-gap); }
+
+  .section-title { font-size: 1.6rem; }
+
+  .paper { padding: 1.4rem 0; }
+  .paper-title a,
+  .paper-title .paper-name { font-size: 1.15rem; line-height: 1.4; }
+  .paper-meta { font-size: 0.95rem; }
+  .paper-links { flex-wrap: wrap; }
+  .paper-links a { font-size: 0.82rem; padding: 0.3rem 0; }
+
+  /* Full-width buttons are easier to tap */
+  .btn-primary, .btn-secondary {
+    display: block;
+    text-align: center;
+    padding: 0.8rem 1.4rem;
+    font-size: 0.85rem;
+  }
+
+  footer { padding: 1.6rem 1.25rem; }
 }

@@ -118,13 +118,33 @@
 /* ── Responsive ───────────────────────────────────────────── */
 @media (max-width: 680px) {
   .hero {
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-    padding: 3rem 1.5rem 3rem;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+    padding: 2rem 1.25rem 3rem;
   }
-  .hero-portrait { order: -1; }
-  .portrait-wrap { width: 130px; height: 160px; }
-  .hero h1 { font-size: 2rem; }
-  .research-areas { grid-template-columns: 1fr; gap: 1rem; }
-  .home-content { padding: 0 1.5rem 4rem; }
+
+  /* Portrait above the text, centred and larger, same proportions as desktop */
+  .hero-portrait { order: -1; justify-self: center; }
+  .portrait-wrap {
+    width: min(62vw, 240px);
+    height: auto;
+    aspect-ratio: 19 / 27;
+  }
+
+  .hero-text { text-align: center; }
+  .hero h1 { font-size: 2.1rem; }
+  .title-line { font-size: 1.15rem; }
+  .affiliation { font-size: 0.9rem; margin-bottom: 1.8rem; }
+  .bio {
+    text-align: left;
+    max-width: none;
+    font-size: 1rem;
+    margin-bottom: 1.4rem;
+  }
+  .hero-links { flex-direction: column; gap: 0.75rem; margin-top: 2rem; }
+
+  .research-areas { grid-template-columns: 1fr; gap: 1.4rem; }
+  .area h3 { font-size: 1.15rem; }
+  .area p { font-size: 0.95rem; }
+  .home-content { padding: 0 1.25rem 4rem; }
 }

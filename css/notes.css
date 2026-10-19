@@ -291,5 +291,14 @@
   .equilibrium-display { grid-column: 1; grid-row: 3; }
 
   .social-grid { grid-template-columns: 1fr; }
+
+  .course { padding: 1.4rem 0; }
+  .course-header { flex-wrap: wrap; gap: 0.1rem 0.8rem; }
+  .course-header h3 { font-size: 1.15rem; line-height: 1.4; }
+  .course-meta, .course-desc { font-size: 0.95rem; }
+
+  .contact-block { max-width: none; }
+  .contact-email { font-size: 1.25rem; }
+  .contact-address { font-size: 1rem; }
   .note-grid { grid-template-columns: 1fr; }
 }
